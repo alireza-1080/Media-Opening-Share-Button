@@ -1,0 +1,77 @@
+.body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #0984e3;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+
+  position: relative;
+}
+
+.share-button-container button {
+  width: 180px;
+  height: 70px;
+  color: #0984e3;
+  font-size: 24px;
+  font-weight: 500;
+  transition: all 250ms ease-in-out;
+  border-radius: 40px;
+  text-transform: uppercase;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.share-button-container button:hover {
+  letter-spacing: 3px;
+}
+
+.media-buttons-container {
+  position: absolute;
+  top: calc(50% - 140px);
+  left: calc(50% - 132px);
+
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1.5rem;
+
+  background-color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 40px;
+  transition: all 250ms ease-in-out;
+}
+
+.media-buttons-container.not-active {
+  top: calc(50% - 200px);
+  opacity: 0;
+}
+
+.media-buttons-container::after {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  transform: rotateZ(45deg);
+  z-index: 1;
+
+  position: absolute;
+  bottom: -10px;
+  left: calc(50% - 20px);
+
+
+}
+
+.icon{
+  font-size: 2rem;
+  color: #0984e3;
+  transition: all 250ms ease-in-out;
+
+  position: relative;
+  z-index: 2;
+}
+
+.icon:hover {
+  color: #e91e63;
+}
